@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.user-options {
+    display: flex;
+    justify-content: space-evenly;
+    width: 350px;
+    margin: 15px;
+}
+
+.choice:hover {
+    filter: brightness(125%);
+    cursor: pointer;
+}
