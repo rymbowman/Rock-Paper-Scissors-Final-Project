@@ -22,3 +22,9 @@ body {
     filter: brightness(125%);
     cursor: pointer;
 }
+
+#computer-result {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
