@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Hello")
-    weaponChoice();
+    playRound();
 })
 
 let computerScore = 0;
@@ -9,27 +8,27 @@ const weaponOptions = ['rock', 'paper', 'scissors'];
 
 
 document.querySelector('#rock-img').addEventListener('click', () => {
-        weaponChoice('rock')
+        playRound('rock')
     })
 document.querySelector('#paper-img').addEventListener('click', () => {
-        weaponChoice('paper')
+        playRound('paper')
     })
 document.querySelector('#scissors-img').addEventListener('click', () => {
-        weaponChoice('scissors')
+        playRound('scissors')
     })
 
 
-function weaponChoice(choice){
+function playRound(choice){
     let userChoice = choice
     let computerChoice = weaponOptions[Math.floor(Math.random()* weaponOptions.length)];
     console.log(userChoice);
     console.log(computerChoice);
-    playRound(userChoice, computerChoice);
+    roundResult(userChoice, computerChoice);
 }
 
 
         
-function playRound(userChoice, computerChoice){
+function roundResult(userChoice, computerChoice){
     let resultMessage = document.querySelector('#round-result-message');
     let computerChoiceImgOutput = document.querySelector('#computer-result');
     if (userChoice === 'rock' && computerChoice === 'rock') {
