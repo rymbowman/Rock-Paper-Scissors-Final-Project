@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Hello")
     getComputerChoice();
+    getUserChoice();
 })
 
 function getComputerChoice() {
@@ -17,3 +18,18 @@ if (computerChoice === 'rock'){
     computerChoiceImgOutput.innerHTML = "Computer Selects: <img src=\"https://img.icons8.com/color/48/scissors.png\" width=\"48px\" height=\"48px\">"
 }
 };
+
+function getUserChoice(){
+    let userChoiceRock = document.querySelector('#rock-img');
+    userChoiceRock.addEventListener('click', () => {
+        console.log("You selected rock");
+    })
+    let userChoicePaper = document.querySelector('#paper-img');
+    userChoicePaper.addEventListener('click', () => {
+        console.log("You selected paper");
+    })
+    let userChoiceScissors = document.querySelector('#scissors-img');
+    userChoiceScissors.addEventListener('click', () => {
+        console.log("You selected scissors");
+    })
+}
