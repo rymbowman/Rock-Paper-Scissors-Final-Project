@@ -6,6 +6,7 @@ let computerScore = 0;
 let userScore = 0;
 const weaponOptions = ['rock', 'paper', 'scissors'];
 let resultMessage = document.querySelector('#round-result-message');
+let computerChoiceImgOutput = document.querySelector('#computer-result');
 let userScoreInt = document.querySelector('#user-score-int');
 let cpuScoreInt = document.querySelector('#cpu-score-int');
 
@@ -30,7 +31,6 @@ function playRound(choice){
 }
         
 function roundResult(userChoice, computerChoice){
-    let computerChoiceImgOutput = document.querySelector('#computer-result');
     if (userChoice === 'rock' && computerChoice === 'rock') {
         computerChoiceImgOutput.innerHTML = "Computer selected: <img src=\"https://img.icons8.com/emoji/48/rock-emoji.png\" width=\"48px\" height=\"48px\">"
         resultMessage.innerHTML = "That is a tie:/"
@@ -81,6 +81,8 @@ function checkGameOver(){
         computerScore = 0
         cpuScoreInt.innerHTML = `${computerScore}`;
         userScoreInt.innerHTML = `${userScore}`;
+        resultMessage.innerHTML = "";
+        computerChoiceImgOutput.innerHTML = "";
     }
 }
 
