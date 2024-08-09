@@ -19,8 +19,8 @@ body {
 .user-options {
     display: flex;
     justify-content: space-evenly;
-    width: 350px;
-    margin: 15px;
+    width: 400px;
+    margin: 40px;
 }
 
 .choice{
